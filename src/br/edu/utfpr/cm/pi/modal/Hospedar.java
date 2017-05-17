@@ -6,7 +6,10 @@ package br.edu.utfpr.cm.pi.modal;
 
 import java.io.Serializable;
 import java.util.Calendar;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
@@ -18,7 +21,12 @@ import javax.persistence.Temporal;
 @Entity
 public class Hospedar implements Serializable {
 
+       /**
+     * Identificador do Hospedar.
+     */
     @Id
+    @Column(name = "id_Hospedar")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private boolean estado;
     @Temporal(javax.persistence.TemporalType.DATE)

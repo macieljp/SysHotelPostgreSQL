@@ -8,8 +8,11 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -22,7 +25,12 @@ import javax.persistence.Temporal;
 @Entity
 public class Cliente implements Serializable {
 
+    /**
+     * Identificador do cliente.
+     */
     @Id
+    @Column(name = "id_cliente")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
     private String cpf;

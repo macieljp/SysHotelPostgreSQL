@@ -6,8 +6,11 @@ package br.edu.utfpr.cm.pi.modal;
 
 import java.io.Serializable;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -18,7 +21,12 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Municipio implements Serializable {
 
+       /**
+     * Identificador do Municipio.
+     */
     @Id
+    @Column(name = "id_Municipio")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

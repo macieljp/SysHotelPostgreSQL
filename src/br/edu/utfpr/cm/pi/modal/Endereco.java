@@ -2,8 +2,11 @@ package br.edu.utfpr.cm.pi.modal;
 
 import java.io.Serializable;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -15,7 +18,12 @@ import javax.persistence.ManyToOne;
 public class Endereco implements Serializable {
 
     
+        /**
+     * Identificador do Endereco.
+     */
     @Id
+    @Column(name = "id_endereco")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String tipoLogradouro;
     private String logradouro;

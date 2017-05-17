@@ -7,8 +7,11 @@ package br.edu.utfpr.cm.pi.modal;
 import java.io.Serializable;
 import java.util.Calendar;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -20,7 +23,12 @@ import javax.persistence.Temporal;
 @Entity
 public class Reserva implements Serializable {
 
+        /**
+     * Identificador do Reserva.
+     */
     @Id
+    @Column(name = "id_Reserva")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String status;//estado atual da reserva
     @Temporal(javax.persistence.TemporalType.DATE)
