@@ -22,7 +22,7 @@ public class Endereco implements Serializable {
      * Identificador do Endereco.
      */
     @Id
-    @Column(name = "id_endereco")
+    //@Column(name = "id_endereco")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String tipoLogradouro;

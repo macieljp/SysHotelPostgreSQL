@@ -181,7 +181,7 @@ public class LoginNovo extends javax.swing.JFrame {
                 e.printStackTrace();
                 JOptionPane.showMessageDialog(null, "Problema ao criar Banco");
             } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Erro inesperado ao tentar iniciar");
+                JOptionPane.showMessageDialog(null, "Erro ao iniciar aplicação");
             }
         }
 
