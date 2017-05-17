@@ -23,7 +23,7 @@ import javax.swing.JOptionPane;
 public class Util {
 
      private static Component rootPane;
-    private static SimpleDateFormat dataFormatada = new SimpleDateFormat("dd/MM/yyyy");
+    private static final SimpleDateFormat dataFormatada = new SimpleDateFormat("dd/MM/yyyy");
 
     public static void abrirJFrameCentralizado(JFrame dialog) {
 
